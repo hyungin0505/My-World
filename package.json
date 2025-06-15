@@ -2,7 +2,7 @@
   "name": "my-blog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://<your-github-username>.github.io/<your-repo-name>",
+  "homepage": "https://hyungin0505.github.io/My-World",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
