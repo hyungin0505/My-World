@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "serve out",
     "predeploy": "npm run build && touch out/.nojekyll",
     "deploy": "gh-pages -d out --dotfiles"
   },
@@ -34,6 +34,7 @@
     "eslint-config-next": "15.1.6",
     "gh-pages": "^6.3.0",
     "postcss": "^8.5.1",
+    "serve": "^14.2.4",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   },
@@ -43,7 +44,9 @@
   "license": "ISC",
   "eslintConfig": {
     "root": true,
-    "extends": ["next/core-web-vitals"],
+    "extends": [
+      "next/core-web-vitals"
+    ],
     "rules": {
       "react-hooks/exhaustive-deps": "off",
       "@next/next/no-html-link-for-pages": "off",
