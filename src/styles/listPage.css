@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "prismjs";
+@import 'prismjs/themes/prism-tomorrow.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .postList ul li {
+        @apply mb-2.5;
+        @apply mx-[15px];
+
+        @apply md:mb-2.5;
+        @apply md:px-[0px];
+    }
+    .postList ul li:hover {
+        @apply rounded-md md:rounded-md bg-[#2c2c2c] md:bg-[#2c2c2c];
+    }
+    .listElement {
+        @apply pl-2.5 md:pl-2.5;
+    }
+    .listElement a {
+        @apply text-5xl;
+        @apply md:text-3xl font-bold md:font-bold;
+    }
+    #list-title {
+        @apply text-xl;
+        @apply pt-[3px];
+        @apply pb-[7px];
+
+        @apply md:text-3xl;
+        @apply md:font-bold;
+    }
+    #list-category {
+        font-family: 'minecraft';
+        @apply text-sm md:text-sm text-[#b3b3b3] md:text-[#b3b3b3] pt-1.5 md:pt-1.5;
+    }
+    #list-date {
+        font-family: 'minecraft';
+        @apply text-sm md:text-sm text-[#b3b3b3] md:text-[#b3b3b3] pb-1.5 md:pb-1.5;
+    }
+}

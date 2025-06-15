@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "prismjs";
+@import 'prismjs/themes/prism-tomorrow.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hljs-function {
+    color: #aab94a;
+}
+.hljs-comment {
+    color: #6a9955; /* 녹색 (주석) */
+  }
+  .hljs-keyword {
+    color: #c678dd; /* 보라색 (예약어) */
+  }
+  .hljs-title {
+    color: #61afef; /* 파란색 (함수명, 클래스명 등) */
+  }
+  .hljs-params {
+    color: #d19a66; /* 주황색 (함수의 매개변수) */
+  }
+  .hljs-literal {
+    color: #98c379; /* 초록색 (리터럴 값, True/False 등) */
+  }
+  .hljs-string {
+    color: #e06c75; /* 빨간색 (문자열) */
+  }
+  .hljs-number {
+    color: #d19a66; /* 주황색 (숫자) */
+  }
+  .hljs-built_in {
+    color: #56b6c2; /* 하늘색 (내장 함수) */
+  }
+
+@layer components {
+    .content-header {
+        @apply mx-[15px];
+        @apply flex;
+        @apply flex-col;
+        @apply mb-12;
+
+        @apply md:w-[800px];
+        @apply md:mx-auto;
+        @apply md:mb-12;
+    }
+    .content-category {
+        font-size: 15px;
+        font-family: 'minecraft';
+        color: #b3b3b3;
+    }
+    .content-title {
+        @apply text-[30px];
+        @apply font-bold;
+
+        @apply md:text-[40px];
+    }
+    .content-date {
+        font-size: 15px;
+        font-family: 'minecraft';
+        color: #b3b3b3;
+    }
+    .md-content span {
+        @apply m-[0px];
+        @apply text-[13px];
+    }
+    .md-content {
+        @apply mx-[15px];
+        @apply md:mx-[0px];
+
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+    }
+    .md-content h1 {
+        font-size:30px;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .md-content h2 {
+        font-size:25px;
+        font-weight: 600;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .md-content h3 {
+        font-size:20px;
+        font-weight: 600;
+        margin-top:1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .md-content p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height:1.8;
+    }
+    .md-content ul, .md-content ol {
+        margin-left: 2rem;
+    }
+    .md-content a {
+        color: #4e9af1;
+        text-decoration: none;
+    }
+    .md-content a:hover {
+        text-decoration: underline;
+    }
+    .md-content hr {
+        margin-top: 40px;
+        margin-bottom: 1rem;
+        border-top: 1px solid #3b3b3b
+    }
+    .md-content p img {
+        margin-top: 20px;
+    }
+    .md-content p code {
+        background-color: #323232;
+        border-radius: 3px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        font-size: 14px;
+        color: #ff4646;
+    }
+    .md-content pre {
+        background-color: #2d2d2d; /* 어두운 배경색 */
+        border-radius: 5px;
+        padding: 1rem;
+        overflow-x: auto;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .md-content pre code {
+        font-family: "Fira Code", monospace;
+        font-size: 14px;
+        text-shadow: none;
+        color: white;
+    }
+    /*.token {
+        border: none;
+    }
+    .token.keyword {
+        color: #66d9ef;
+    }
+    .token.string {
+        color: #e6db74;
+    }
+    .token.number {
+        color: #ae81ff;
+    } */
+    .md-content blockquote {
+        border-left: 4px solid #a0a0a0;
+        padding-top: 0.3rem;
+        padding-bottom: 0.1rem;
+        padding-left: 1rem;
+        margin: 1rem 0;
+        font-style: italic;
+      }
+    .md-content ul, .md-content ol {
+        padding-left: 1.0rem; /* 기본 들여쓰기 */
+        margin: 0.5rem 0;
+        }
+
+    .md-content ul ul, .md-content ol ol {
+        padding-left: 1.3rem; /* 2단계 목록 - 더 깊게 들여쓰기 */
+        }
+    .md-content ul ul ul, .md-content ol ol ol {
+        padding-left: 1.6rem; /* 3단계 목록 */
+        }
+    .md-content li {
+        margin-bottom: 0.25rem;
+        }
+    .md-content ul {
+        list-style-type: disc;
+        }
+    .md-content ul ul {
+        list-style-type: circle;
+        }
+    .md-content ul ul ul {
+        list-style-type: square;
+        }
+    .md-content ol {
+        list-style-type: decimal; 
+        }
+    .md-content ol ol {
+        list-style-type: lower-alpha;
+        }
+    .md-content ol ol ol {
+        list-style-type: lower-roman; 
+        }   
+}

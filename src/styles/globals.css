@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "prismjs";
+@import 'prismjs/themes/prism-tomorrow.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'minecrafttitle';
+  src: url('./../../public/fonts/MinecraftTitle.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'minecraft';
+  src: url('./../../public/fonts/MinecraftRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'minecraftbold';
+  src: url('./../../public/fonts/MinecraftBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'custom';
+  src: url('./../../public/fonts/NanumBarunpenR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'custombold';
+  src: url('./../../public/fonts/NanumBarunpenB.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'NotoSans', sans-serif;
+}
+
+:root {
+  --background: #1c1c1c;
+  --foreground: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1c1c1c;
+    --foreground: white;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, 'NotoSans', sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+  @apply m-0;
+  @apply p-0;
+  @apply flex;
+  @apply flex-col;
+  @apply h-full;
+  @apply min-h-[100vh];
+}
+
+@layer components {
+  .header {
+    @apply bg-[#1c1c1c];
+    @apply w-full;
+    @apply p-0;
+    @apply z-[1000];
+    @apply mx-auto;
+  }
+  .header div {
+    font-family: 'minecrafttitle';
+    @apply text-5xl;
+    @apply bg-[#1c1c1c];
+    @apply text-white;
+    @apply text-center;
+    @apply pt-10 pb-3;
+    @apply px-[20px];
+
+    @apply md:text-5xl;
+    @apply md:pt-10 md:pb-5;
+    @apply md:justify-center;
+  }
+  .nav {
+    @apply bg-[#1c1c1c];
+    @apply w-full;
+    @apply mx-auto;
+    @apply flex;
+    @apply justify-center;
+  
+    @apply md:w-[800px];
+    @apply md:justify-end;
+  }
+  .nav ul {
+    font-family: 'minecraft'
+  }
+  .nav ul li {
+    @apply bg-[#1c1c1c];
+    @apply inline-block;
+    @apply pr-[10px];
+    @apply pl-[10px];
+    @apply mb-[10px];
+    @apply text-2xl;
+
+    @apply md:text-xl;
+    @apply md:inline-block;
+    @apply md:pl-[50px]
+  }
+  .nav ul li :hover {
+    @apply underline;
+  }
+  .mainField {
+    @apply w-full;
+    @apply flex-1;
+
+    @apply md:w-[800px]; 
+    @apply md:mt-[30px]; 
+    @apply md:mx-auto; 
+  }
+  .footer {
+    font-family: 'minecraft';
+    @apply mt-[80px];
+    @apply mb-[30px];
+    @apply text-center;
+  }
+  .copyright {
+    @apply text-[13px]; 
+    @apply text-[#9b9b9b]; 
+  }
+  .build {
+    @apply text-[10px]; /* font-size: 10px */
+    @apply text-[#9b9b9b]; /* color: #9b9b9b */
+    @apply hidden; /* display: none */
+  }
+  .inspire {
+    @apply text-[10px]; /* font-size: 10px */
+    @apply text-[#9b9b9b]; /* color: #9b9b9b */
+  }
+  .design {
+    @apply text-[10px]; /* font-size: 10px */
+    @apply text-[#9b9b9b]; /* color: #9b9b9b */ 
+  }
+  .footer p span {
+    font-weight: bold;
+  }
+}
+.page-transition {
+  @apply fixed top-0 left-0 w-[100vw] h-[100vh] bg-[#1c1c1c] z-[9999];
+  animation: fadeOut 0.2s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; } to { opacity: 0; }
+}

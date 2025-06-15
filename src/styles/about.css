@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "prismjs";
+@import 'prismjs/themes/prism-tomorrow.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .about-main {
+        font-family: 'minecraft';
+        @apply flex-col;
+        @apply px-[15px];
+
+        @apply md:px-[0px];
+    }
+    .about-main h1 {
+        @apply text-5xl;
+        @apply pt-5;
+        @apply pb-5;
+
+        @apply md:text-6xl;
+        @apply md:pt-5;
+        @apply md:pb-5;
+    }
+    .about-main p, .about-contact p{
+        @apply text-[18px];
+        @apply mb-[5px];
+
+        @apply md:text-[20px];
+        @apply md:mb-[5px];
+    }
+    .about-main p span, .about-contact p span{
+        font-family: 'minecraftbold';
+    }
+    .chainLine {
+        font-family: 'minecraft';
+        @apply mt-[20px];
+        @apply mb-[10px];
+        @apply px-[15px];
+        @apply mx-auto;
+        @apply text-[7.8px];
+
+        @apply md:mt-[30px];
+        @apply md:mb-[15px];
+        @apply md:px-[0px];
+        @apply md:font-bold;
+        @apply md:text-base;
+    }
+    .about-contact {
+        font-family: 'minecraft';
+        @apply px-[15px];
+
+        @apply md:px-[0px];
+    }
+    .about-contact h1, .about-content h1 {
+        @apply text-3xl;
+        @apply mb-[8px];
+
+        @apply md:text-[35px];
+        @apply md:mb-[15px];
+    }
+    .about-contact p a :hover {
+        @apply underline;
+    }
+    .about-content {
+        font-family: 'minecraft';
+        @apply flex-col;
+        @apply px-[15px];
+        @apply flex;
+
+        @apply md:flex-col;
+        @apply md:px-[0px];
+    }
+    .about-content p {
+        font-family: 'minecraftbold';
+        @apply text-[18px];
+
+        @apply md:text-[20px];
+    }
+    .about-content p span {
+        font-family: 'minecraft';
+        @apply text-[15px];
+
+        @apply md:text-[15px];
+    }
+    .about-content-date {
+        color: rgb(156, 156, 156);
+        @apply mb-[15px];
+
+        @apply md:mb-5;
+    }
+}

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "prismjs";
+@import 'prismjs/themes/prism-tomorrow.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .main-welcome {
+        font-family: 'minecraft';
+        @apply w-full;
+        @apply mx-auto;
+        @apply text-center;
+        @apply mt-[250px];
+
+        @apply md:w-[800px]; /* width: 800px */
+        @apply md:text-[50px]; /* font-size: 50px */
+        @apply md:mt-[300px]; /* margin-top: 300px */
+    }
+}
