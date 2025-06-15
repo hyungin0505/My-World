@@ -1,11 +1,8 @@
-const isProd = process.env.NODE_ENV === 'production'
-const repo = 'My-World'
-
 /** @type {import('next').NextConfig} */
-export default {
+const nextConfig = {
   output: 'export',
-  trailingSlash: true,
-  basePath: isProd ? `/${repo}` : '',
-  assetPrefix: isProd ? `/${repo}/` : '',
-  images: { unoptimized: true },
+  trailingSlash: true,       // 디렉토리/페이지 형태 URL 생성
+  images: { unoptimized: true }  // 이미지 최적화 비활성화 (필요 시)
 }
+
+export default nextConfig
