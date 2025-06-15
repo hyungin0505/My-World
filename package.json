@@ -4,11 +4,10 @@
   "private": true,
   "homepage": "https://hyungin0505.github.io/My-World",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "predeploy": "npm run build && npm run export && touch out/.nojekyll",
-    "deploy": "gh-pages -d out --dotfiles"
+    "predeploy": "npm run build && npm run export",
+    "deploy": "npm run predeploy && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
